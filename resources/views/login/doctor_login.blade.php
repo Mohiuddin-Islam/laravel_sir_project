@@ -43,7 +43,7 @@
                             <div class="panel panel-default card-view mb-0">
                                 <div class="panel-heading">
                                     <div class="pull-left">
-                                        <h6 class="panel-title txt-dark">Sign In</h6>
+                                        <h6 class="panel-title txt-dark">Doctor Sign In</h6>
                                         @if($errors->has('email'))
                                         <div class="alert alert-danger">{{$errors->first('email')}}</div>
                                         @endif
@@ -55,7 +55,7 @@
                                         <div class="row">
                                             <div class="col-sm-12 col-xs-12">
                                                 <div class="form-wrap">
-                                                    <form action="{{ route('admin.login') }}" method="POST">
+                                                    <form action="{{ route('doctor.login') }}" method="POST">
                                                         @csrf
                                                         <div class="form-group">
                                                             <label class="control-label mb-10"

@@ -19,11 +19,22 @@
 	<!--/Preloader-->
     <div class="wrapper">
 			<!-- Top Menu Items -->
+			@if(Auth()->guard('admin')->check())
 			@include('backend.layouts.top_menu')
+			@elseif(Auth()->guard('doctor')->check())
+			@include('backend.layouts.doctor_top_menu')
+			@endif
+
+			
 			<!-- /Top Menu Items -->
 			
 			<!-- Left Sidebar Menu -->
+			@if(Auth()->guard('admin')->check())
 			@include('backend.layouts.leftsidebar')
+			@elseif(Auth()->guard('doctor')->check())
+			@include('backend.layouts.doctor_leftsidebar')
+			@endif
+			
 			<!-- /Left Sidebar Menu -->
 			
 			<!-- Right Sidebar Menu -->
