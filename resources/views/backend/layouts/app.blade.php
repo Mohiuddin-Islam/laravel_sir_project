@@ -8,7 +8,7 @@
 	<meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Kenny Admin, kennyadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
 	<meta name="author" content="hencework"/>
 	
-	@include('backend.layouts.css')
+	@yield('css')
 </head>
 
 <body>
@@ -56,6 +56,6 @@
 	
 	<!-- JavaScript -->
 	
-    @include('backend.layouts.js')
+    @yield('js')
 </body>
 </html>
