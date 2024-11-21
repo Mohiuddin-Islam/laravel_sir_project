@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3310
--- Generation Time: Nov 20, 2024 at 07:57 AM
+-- Generation Time: Nov 21, 2024 at 08:23 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,7 +42,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Test User', 'admin@gmail.com', '$2y$10$1IkU2nI3aZ83MPpJY2PLYuVwaL7jmdVVuBbOMnt5OukRB.cRoIFmu', NULL, '2024-11-18 01:17:12', '2024-11-18 01:17:12');
+(1, 'Mohiuddin', 'admin@gmail.com', '$2y$10$FScFRilXoBC81hmrOtCOBetWRQUebPFK3r0x1u11KB3Ni4lIRePYC', NULL, '2024-11-21 01:09:49', '2024-11-21 01:09:49');
 
 -- --------------------------------------------------------
 
@@ -52,12 +52,13 @@ INSERT INTO `admins` (`id`, `name`, `email`, `password`, `remember_token`, `crea
 
 CREATE TABLE `doctors` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `specialist_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `photo` varchar(255) DEFAULT 'nophoto.jpg',
+  `photo` varchar(255) DEFAULT NULL,
   `remember_token` varchar(100) DEFAULT NULL,
-  `status` enum('active','inactive') NOT NULL,
+  `status` enum('active','inactive') NOT NULL DEFAULT 'inactive',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -66,8 +67,8 @@ CREATE TABLE `doctors` (
 -- Dumping data for table `doctors`
 --
 
-INSERT INTO `doctors` (`id`, `name`, `email`, `password`, `photo`, `remember_token`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Doctor Jamil', 'jamil@gmail.com', '$2y$10$SG/PF/qBwuWwfnA01fZ79uUPR9.Dn6MGU9CVfwtpYNfzlcCdcBcGi', 'nophoto.jpg', NULL, 'active', '2024-11-18 22:58:48', '2024-11-18 22:58:48');
+INSERT INTO `doctors` (`id`, `specialist_id`, `name`, `email`, `password`, `photo`, `remember_token`, `status`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Doctor Jamil', 'jamil@gmail.com', '$2y$10$sWPe7BcOLmbI.slkUJ0gwOk6/2kQz74M3hdxvufLe.zSiFOGUtMoq', NULL, NULL, 'inactive', '2024-11-21 01:09:49', '2024-11-21 01:09:49');
 
 -- --------------------------------------------------------
 
@@ -102,13 +103,13 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_reset_tokens_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(5, '2024_11_18_063438_create_admins_table', 2),
-(6, '2024_11_19_041903_create_doctors_table', 3),
-(7, '2024_11_20_042519_create_specialists_table', 4);
+(15, '2014_10_12_000000_create_users_table', 1),
+(16, '2014_10_12_100000_create_password_reset_tokens_table', 1),
+(17, '2019_08_19_000000_create_failed_jobs_table', 1),
+(18, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(19, '2024_11_18_063438_create_admins_table', 1),
+(20, '2024_11_19_041903_create_doctors_table', 1),
+(21, '2024_11_20_042519_create_specialists_table', 1);
 
 -- --------------------------------------------------------
 
@@ -160,27 +161,26 @@ CREATE TABLE `specialists` (
 --
 
 INSERT INTO `specialists` (`id`, `name`, `details`, `created_at`, `updated_at`) VALUES
-(1, 'Rakib', 'Ent', '2024-11-20 06:36:01', '2024-11-20 06:36:01'),
-(2, 'ullam et eveniet', 'ut quisquam autem praesentium nostrum neque voluptatibus officia vero rem saepe aperiam sunt id incidunt', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(3, 'nihil sequi hic', 'eligendi quos nihil modi nihil atque sint eum non amet ea eos quasi autem cum', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(4, 'dolor praesentium sapiente', 'ex illum nam qui nostrum porro voluptate rem numquam aut quia qui sapiente repudiandae debitis', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(5, 'tenetur magni cum', 'consequatur harum odio cumque veritatis delectus doloribus et magnam consequatur voluptates ad consequatur natus rerum', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(6, 'quas dolor eaque', 'dolores quia ab amet similique qui facilis rem voluptas quidem ad veritatis quibusdam exercitationem eius', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(7, 'et molestiae itaque', 'iusto dicta quo fuga commodi ad alias autem ut aliquam rem sint suscipit voluptas a', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(8, 'est quisquam sapiente', 'placeat quas dicta magni eveniet voluptatibus dignissimos ut et ad deserunt cum est expedita et', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(9, 'voluptate voluptatibus provident', 'quisquam nihil cupiditate totam et hic aut ut laborum et temporibus iusto dolores corrupti ut', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(10, 'adipisci voluptas qui', 'illum pariatur quo nihil est accusantium sint sit sed quasi magnam sed id perferendis nam', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(11, 'in molestiae est', 'earum nemo consequatur nostrum voluptatem dolorum et dolor nostrum rerum dolores animi id exercitationem repellat', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(12, 'soluta cupiditate dolorem', 'occaecati quia voluptas expedita sunt ut nemo temporibus autem hic sapiente quaerat suscipit sit eum', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(13, 'in est eos', 'aut similique quos maxime nobis ad dolores quidem aut itaque id tempore asperiores non qui', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(14, 'cum et dolores', 'id officiis perferendis ut eos possimus est et est voluptatum autem accusamus atque vero qui', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(15, 'autem iure amet', 'asperiores corporis ea molestias et amet similique aliquid repellat quos cumque eum quo quisquam voluptatem', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(16, 'eos ut a', 'exercitationem officiis itaque nam molestiae quasi quidem ex ducimus aut quo hic fugiat veniam et', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(17, 'rerum voluptas libero', 'autem quia voluptates ut est est ex doloremque fuga dolorem ab quis omnis quo asperiores', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(18, 'ad ut voluptatem', 'et saepe esse sit nemo tenetur esse omnis ipsam omnis vitae aut dolore soluta neque', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(19, 'error aliquid ut', 'perferendis doloremque culpa quia excepturi impedit cupiditate tempora qui aut officiis officia non sed qui', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(20, 'ut reiciendis veniam', 'id quibusdam adipisci ut iste adipisci vel sit vero vel omnis quia accusantium expedita fugiat', '2024-11-20 00:44:48', '2024-11-20 00:44:48'),
-(21, 'repellat rem maxime', 'quae incidunt fuga ut quia quae aut inventore dignissimos recusandae earum velit repellendus deserunt tempore', '2024-11-20 00:44:48', '2024-11-20 00:44:48');
+(1, 'omnis doloribus veniam', 'doloribus ut quia nesciunt illum blanditiis quis blanditiis inventore corrupti unde ea aliquid similique earum', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(2, 'ea tempora enim', 'suscipit ut sint aperiam aut ducimus alias ipsum aut vitae qui assumenda quidem aperiam ea', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(3, 'omnis vero eligendi', 'dolores natus incidunt nulla vel tempore rerum molestias et ab expedita officia minima adipisci eum', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(4, 'optio tenetur repudiandae', 'aliquid ratione voluptas molestiae vitae perferendis ea ea pariatur quibusdam vitae excepturi nobis quod fugiat', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(5, 'architecto praesentium cum', 'amet quia et quibusdam dicta ratione fuga dolores velit sunt a perspiciatis molestiae quo adipisci', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(6, 'praesentium quasi quidem', 'libero autem qui possimus rem vero nostrum praesentium corrupti qui et officia libero laudantium rerum', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(7, 'accusamus ipsum eum', 'voluptatem non laboriosam iure expedita adipisci rerum non officiis error cumque sit optio ut sed', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(8, 'qui libero deserunt', 'omnis adipisci velit tenetur necessitatibus reprehenderit ex molestiae quasi voluptatum ut placeat tempora quis quibusdam', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(9, 'culpa corporis quibusdam', 'numquam animi iste voluptate ducimus et et tempora et suscipit voluptate dignissimos et non et', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(10, 'minus sunt eum', 'consectetur voluptatem temporibus nulla libero unde reiciendis labore vero et quia quos totam id nihil', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(11, 'nam quia ex', 'aliquid dolorum natus sint autem maxime consequuntur aut aspernatur fuga mollitia non et et sunt', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(12, 'nobis eos ad', 'sit quas id nihil ut quod aut nihil ipsam et totam vel et cumque laborum', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(13, 'debitis occaecati perferendis', 'quia laborum veritatis consequatur atque quidem mollitia soluta et quia quo ut commodi adipisci quia', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(14, 'illum est occaecati', 'quas rerum consequatur veniam pariatur odit suscipit amet inventore iste repellendus qui et porro id', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(15, 'quia non aut', 'dolor et sequi perspiciatis ad id quod voluptatem dolor facilis porro sit aliquam qui expedita', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(16, 'ut veniam consequatur', 'sequi nobis officia aut et cum voluptatem iusto voluptatem voluptas temporibus libero quae quas excepturi', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(17, 'voluptatem enim corporis', 'totam dolor laudantium nihil esse incidunt dolores non corrupti quis deleniti dolorem aut deleniti et', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(18, 'qui et fugit', 'quibusdam quibusdam eum repellat velit sint quia nisi explicabo sed quam quis ut ipsum facilis', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(19, 'est voluptate animi', 'rerum ea facilis inventore minus et eum vel corrupti tenetur rem ut vel corrupti incidunt', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(20, 'ducimus quidem deleniti', 'voluptatum est deleniti voluptatibus inventore est qui impedit minus reprehenderit quia vitae officia qui iusto', '2024-11-21 01:09:50', '2024-11-21 01:09:50');
 
 -- --------------------------------------------------------
 
@@ -198,13 +198,6 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Mohiuddin', 'admin@gmail.com', NULL, '$2y$10$TV4c.Rlwy4aMm0fMwxOOSuQfD6nhSDE3aNODbY4Crxc3T4iyEgksa', NULL, '2024-11-17 21:26:44', '2024-11-17 21:26:44');
 
 --
 -- Indexes for dumped tables
@@ -290,7 +283,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -302,13 +295,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `specialists`
 --
 ALTER TABLE `specialists`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

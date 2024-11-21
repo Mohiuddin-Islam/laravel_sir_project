@@ -67,7 +67,13 @@
             <div class="panel panel-default card-view">
                 <div class="panel-heading">
                     <div class="pull-left">
+                        @if(session('msg'))
+                        <div class="alert alert-success">{{session('msg')}}</div>
+                        @endif
                         <h6 class="panel-title txt-dark">Export</h6>
+                        <div class="pull-right">
+                            <a class="btn btn-warning" href="{{ route('specialist.create') }}"> Create New Post</a>
+                        </div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -90,17 +96,29 @@
                                             <th>ID</th>
                                             <th>Specialist Name</th>
                                             <th>Details</th>
-                                            <th>Action</th>
+                                            <th style="width:230px">Action</th>
                                             
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         @foreach($items as $item)
                                         <tr>
-                                            <td>{{$loop->index}}</td>
+                                            <td>{{$loop->iteration}}</td>
                                             <td>{{$item->name}}</td>
                                             <td>{{$item->details}}</td>
-                                            <td>Edit | Delete</td>
+                                            <td>
+                                                
+                                                <form action="{{ route('specialist.destroy', $item->id) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <a class="btn btn-primary" href="{{ route('specialist.edit',$item->id) }}">Edit</a>
+                                                    <a class="btn btn-danger" href="{{ route('specialist.destroy',$item->id) }}">Delete</a>
+    
+                                                    
+                                                    
+                                                </form>
+                                                
+                                            </td>
                                             
                                         </tr>
                                         @endforeach
