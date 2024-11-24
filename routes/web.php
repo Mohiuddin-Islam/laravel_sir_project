@@ -71,5 +71,5 @@ Route::middleware('auth:doctor')->prefix('doctor')->group( function () {
     Route::post('logout', [App\Http\Controllers\Auth\Doctor\LoginController::class, 'logout'])->name('doctor.logout');
 
     Route::view('/dashboard','backend.doctor_dashboard');
-
+    
 });
