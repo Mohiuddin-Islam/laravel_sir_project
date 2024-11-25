@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3310
--- Generation Time: Nov 24, 2024 at 03:59 AM
+-- Generation Time: Nov 25, 2024 at 08:25 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -68,7 +68,9 @@ CREATE TABLE `doctors` (
 --
 
 INSERT INTO `doctors` (`id`, `specialist_id`, `name`, `email`, `password`, `photo`, `remember_token`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Doctor Jamil', 'jamil@gmail.com', '$2y$10$sWPe7BcOLmbI.slkUJ0gwOk6/2kQz74M3hdxvufLe.zSiFOGUtMoq', NULL, NULL, 'inactive', '2024-11-21 01:09:49', '2024-11-21 01:09:49');
+(1, 1, 'Doctor Jamil', 'jamil@gmail.com', '$2y$10$sWPe7BcOLmbI.slkUJ0gwOk6/2kQz74M3hdxvufLe.zSiFOGUtMoq', NULL, NULL, 'inactive', '2024-11-21 01:09:49', '2024-11-21 01:09:49'),
+(2, 1, 'Abdullah', 'rahim@gmail.com', '$2y$10$xQbuAWHyUbDjjm/Mi1qqWOYaE3KKq0n2fekbueg5OoijhVIq7Pp5S', NULL, NULL, 'active', '2024-11-25 01:04:59', '2024-11-25 01:04:59'),
+(3, 2, 'Saif Jahan', 'saif@gmail.com', '$2y$10$FDVqZipJI1JGW2yjUYIzfeuWaimEUCBuYkfRqFlTr7d3QV6eULBmi', NULL, NULL, 'active', '2024-11-25 01:14:10', '2024-11-25 01:14:10');
 
 -- --------------------------------------------------------
 
@@ -161,7 +163,7 @@ CREATE TABLE `specialists` (
 --
 
 INSERT INTO `specialists` (`id`, `name`, `details`, `created_at`, `updated_at`) VALUES
-(1, 'omnis doloribus veniam', 'doloribus ut quia nesciunt illum blanditiis quis blanditiis inventore corrupti unde ea aliquid similique earum', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
+(1, 'Eye Specialist', 'doloribus ut quia nesciunt illum blanditiis quis blanditiis inventore corrupti unde ea aliquid similique earum', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
 (2, 'ea tempora enim', 'suscipit ut sint aperiam aut ducimus alias ipsum aut vitae qui assumenda quidem aperiam ea', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
 (3, 'omnis vero eligendi', 'dolores natus incidunt nulla vel tempore rerum molestias et ab expedita officia minima adipisci eum', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
 (4, 'optio tenetur repudiandae', 'aliquid ratione voluptas molestiae vitae perferendis ea ea pariatur quibusdam vitae excepturi nobis quod fugiat', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
@@ -178,9 +180,8 @@ INSERT INTO `specialists` (`id`, `name`, `details`, `created_at`, `updated_at`) 
 (15, 'quia non aut', 'dolor et sequi perspiciatis ad id quod voluptatem dolor facilis porro sit aliquam qui expedita', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
 (16, 'ut veniam consequatur', 'sequi nobis officia aut et cum voluptatem iusto voluptatem voluptas temporibus libero quae quas excepturi', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
 (17, 'voluptatem enim corporis', 'totam dolor laudantium nihil esse incidunt dolores non corrupti quis deleniti dolorem aut deleniti et', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(18, 'qui et fugit', 'quibusdam quibusdam eum repellat velit sint quia nisi explicabo sed quam quis ut ipsum facilis', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(19, 'est voluptate animi', 'rerum ea facilis inventore minus et eum vel corrupti tenetur rem ut vel corrupti incidunt', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(20, 'ducimus quidem deleniti', 'voluptatum est deleniti voluptatibus inventore est qui impedit minus reprehenderit quia vitae officia qui iusto', '2024-11-21 01:09:50', '2024-11-21 01:09:50');
+(18, 'qui et fugit 123', 'quibusdam quibusdam eum repellat velit sint quia nisi explicabo sed quam quis ut ipsum facilis', '2024-11-21 01:09:50', '2024-11-23 21:01:44'),
+(21, 'Head Specialist', 'For Head Care', '2024-11-24 23:32:33', '2024-11-24 23:32:33');
 
 -- --------------------------------------------------------
 
@@ -271,7 +272,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -295,7 +296,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `specialists`
 --
 ALTER TABLE `specialists`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -40,7 +40,7 @@
     <script src="{{ asset('dist/js/init.js') }}"></script>
 @endsection
 
-<h3>List of All Specialist</h3>
+<h3>List of All Doctor</h3>
 
 <div class="container-fluid">
 
@@ -53,8 +53,8 @@
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
             <ol class="breadcrumb">
                 <li><a href="index.html">Dashboard</a></li>
-                <li><a href="#"><span>table</span></a></li>
-                <li class="active"><span>Export</span></li>
+                <li><a href="#"><span>Doctor</span></a></li>
+                <li class="active"><span>Doctor All</span></li>
             </ol>
         </div>
         <!-- /Breadcrumb -->
@@ -85,8 +85,8 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Specialist Name</th>
-                                            <th>Details</th>
+                                            <th>Doctor Name</th>
+                                            <th>Specialist</th>
                                             <th>Action</th>
 
                                         </tr>
@@ -94,8 +94,8 @@
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Specialist Name</th>
-                                            <th>Details</th>
+                                            <th>Doctor Name</th>
+                                            <th>Specialist</th>
                                             <th style="width:280px">Action</th>
 
                                         </tr>
@@ -105,7 +105,7 @@
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $item->name }}</td>
-                                                <td>{{ $item->details }}</td>
+                                                <td>{{ $item->specialist->name }}</td>
                                                 <td>
 
                                                     <form action="{{ route('specialist.destroy', $item->id) }}"
