@@ -40,7 +40,7 @@
 <script src="{{asset('dist/js/init.js')}}"></script>
 @endsection
 
-<h3>List of All Specialist</h3>
+<h3>View Specialist</h3>
 
 <div class="container-fluid">
 

@@ -86,6 +86,9 @@
                                             <div class="col-sm-9">
                                                 <div class="input-group">
                                                     <input type="text" name="name" value="{{old('name')}}" class="form-control" id="exampleInputuname_4" placeholder="Enter Doctor Name">
+                                                    @error('name')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
                                                     <div class="input-group-addon"><i class="icon-user"></i></div>
                                                 </div>
                                             </div>
