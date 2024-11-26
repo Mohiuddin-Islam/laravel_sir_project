@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3310
--- Generation Time: Nov 25, 2024 at 08:25 AM
+-- Generation Time: Nov 26, 2024 at 08:20 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -69,8 +69,12 @@ CREATE TABLE `doctors` (
 
 INSERT INTO `doctors` (`id`, `specialist_id`, `name`, `email`, `password`, `photo`, `remember_token`, `status`, `created_at`, `updated_at`) VALUES
 (1, 1, 'Doctor Jamil', 'jamil@gmail.com', '$2y$10$sWPe7BcOLmbI.slkUJ0gwOk6/2kQz74M3hdxvufLe.zSiFOGUtMoq', NULL, NULL, 'inactive', '2024-11-21 01:09:49', '2024-11-21 01:09:49'),
-(2, 1, 'Abdullah', 'rahim@gmail.com', '$2y$10$xQbuAWHyUbDjjm/Mi1qqWOYaE3KKq0n2fekbueg5OoijhVIq7Pp5S', NULL, NULL, 'active', '2024-11-25 01:04:59', '2024-11-25 01:04:59'),
-(3, 2, 'Saif Jahan', 'saif@gmail.com', '$2y$10$FDVqZipJI1JGW2yjUYIzfeuWaimEUCBuYkfRqFlTr7d3QV6eULBmi', NULL, NULL, 'active', '2024-11-25 01:14:10', '2024-11-25 01:14:10');
+(4, 1, 'Abdullah', 'asm@gmail.com', '$2y$10$SFDKkkVY27d5yMA76IMueudyKiRAQq8XpMYc1y6Y4yj5BPeqkPcvu', NULL, NULL, 'active', '2024-11-25 22:18:15', '2024-11-25 22:18:15'),
+(11, 21, 'Saif Jahan', 'saif@gmail.com', '$2y$10$zNzLoXTeOayZS5GY0VCiC.GhPkm2mARGIvxWVfka4Wvky9iym93lC', NULL, NULL, 'active', '2024-11-25 22:33:03', '2024-11-25 23:12:48'),
+(12, 21, 'Mohiuddin', 'mohiuddin@gmail.com', '$2y$10$IDtU.rOkLee.koNZGGiHOe18w1PbCByEiB9P1FUKsn5VixuAuOy2u', 'images/20241126061104.jpg', NULL, 'active', '2024-11-26 00:11:04', '2024-11-26 00:11:04'),
+(13, 1, 'Arif', 'arif@gmail.com', '$2y$10$eXmRIU0ySoaST88n6N5ji.2CZzG/YORbIx3BtWiCkP6fnA808aqhe', 'images/20241126062023.png', NULL, 'active', '2024-11-26 00:20:23', '2024-11-26 00:20:23'),
+(14, 1, 'Nusrat Jahan', 'nusrat@gmail.com', '$2y$10$C5Uj1sv82oNR.JPgyaOObuamYBL5.8X9oR3tYQ0uqWE2aZf9RVyWS', 'images/20241126063444.png', NULL, 'active', '2024-11-26 00:26:09', '2024-11-26 00:34:44'),
+(15, 2, 'Rakib Hossain', 'rakib@gmail.com', '$2y$10$Qe8/H0RQl1ZlnAlZnIf6X.KU9DLXYx6b73OkAIEPFqDeZmObUBT06', 'images/nophoto.png', NULL, 'active', '2024-11-26 00:31:14', '2024-11-26 00:31:14');
 
 -- --------------------------------------------------------
 
@@ -165,7 +169,6 @@ CREATE TABLE `specialists` (
 INSERT INTO `specialists` (`id`, `name`, `details`, `created_at`, `updated_at`) VALUES
 (1, 'Eye Specialist', 'doloribus ut quia nesciunt illum blanditiis quis blanditiis inventore corrupti unde ea aliquid similique earum', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
 (2, 'ea tempora enim', 'suscipit ut sint aperiam aut ducimus alias ipsum aut vitae qui assumenda quidem aperiam ea', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(3, 'omnis vero eligendi', 'dolores natus incidunt nulla vel tempore rerum molestias et ab expedita officia minima adipisci eum', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
 (4, 'optio tenetur repudiandae', 'aliquid ratione voluptas molestiae vitae perferendis ea ea pariatur quibusdam vitae excepturi nobis quod fugiat', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
 (5, 'architecto praesentium cum', 'amet quia et quibusdam dicta ratione fuga dolores velit sunt a perspiciatis molestiae quo adipisci', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
 (6, 'praesentium quasi quidem', 'libero autem qui possimus rem vero nostrum praesentium corrupti qui et officia libero laudantium rerum', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
@@ -272,7 +275,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`

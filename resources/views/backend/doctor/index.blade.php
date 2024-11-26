@@ -108,15 +108,15 @@
                                                 <td>{{ $item->specialist->name }}</td>
                                                 <td>
 
-                                                    <form action="{{ route('specialist.destroy', $item->id) }}"
+                                                    <form action="{{ route('doctor.destroy', $item->id) }}"
                                                         method="POST">
                                                         
                                                         <a class="btn btn-primary"
-                                                            href="{{ route('specialist.edit', $item->id) }}">Edit</a>
-                                                            <a class="btn btn-success" href="{{ route('specialist.show',$item->id) }}">View</a>
+                                                            href="{{ route('doctor.edit', $item->id) }}">Edit</a>
+                                                            <a class="btn btn-success" href="{{ route('doctor.show',$item->id) }}">View</a>
                                                             @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                        <button type="submit" onclick="return alert('Are you sure to Delete')" class="btn btn-danger">Delete</button>
                                                         
                                                     </form>
 

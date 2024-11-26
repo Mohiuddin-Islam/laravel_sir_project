@@ -17,7 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.home');
+});
+
+Route::get('/', function () {
+    return view('frontend.about');
 });
 
 //Admin Dashboard

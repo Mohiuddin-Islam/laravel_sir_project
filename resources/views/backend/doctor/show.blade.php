@@ -40,7 +40,7 @@
 <script src="{{asset('dist/js/init.js')}}"></script>
 @endsection
 
-<h3>List of All Specialist</h3>
+<h3>View Doctor Details</h3>
 
 <div class="container-fluid">
 
@@ -62,8 +62,11 @@
     <!-- /Title -->
     
     <!-- Row -->
-    {{$specialist->name}} <br>
-    {{$specialist->details}}
+    <img src="{{asset($doctor->photo)}}" alt="" width="200px"> <br>
+    Name: {{$doctor->name}} <br>
+    Email: {{$doctor->email}} <br>
+    Status: {{$doctor->status}}
+    
     <!-- Row -->
 
 @endsection

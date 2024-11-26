@@ -86,11 +86,12 @@
                                             <div class="col-sm-9">
                                                 <div class="input-group">
                                                     <input type="text" name="name" value="{{old('name')}}" class="form-control" id="exampleInputuname_4" placeholder="Enter Doctor Name">
-                                                    @error('name')
-                                                    <div class="alert alert-danger">{{$message}}</div>
-                                                    @enderror
+                                                    
                                                     <div class="input-group-addon"><i class="icon-user"></i></div>
                                                 </div>
+                                                @error('name')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -104,6 +105,9 @@
                                                     @endforeach
                                                     
                                                 </select>
+                                                @error('specialist')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
                                                 
                                             </div>
                                         </div>
@@ -113,7 +117,11 @@
                                                 <div class="input-group">
                                                     <input type="text" name="email" value="{{old('email')}}" class="form-control" id="exampleInputuname_4" placeholder="Enter Email Address">
                                                     <div class="input-group-addon"><i class="icon-user"></i></div>
+                                                    
                                                 </div>
+                                                @error('email')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -122,7 +130,11 @@
                                                 <div class="input-group">
                                                     <input type="text" name="password" class="form-control" id="exampleInputuname_4" placeholder="Enter Password">
                                                     <div class="input-group-addon"><i class="icon-user"></i></div>
+                                                    
                                                 </div>
+                                                @error('password')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -132,6 +144,9 @@
                                                     <input type="text" name="password_confirmation" class="form-control" id="exampleInputuname_4" placeholder="Enter Confirm Password">
                                                     <div class="input-group-addon"><i class="icon-user"></i></div>
                                                 </div>
+                                                @error('password_confirmation')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
                                             </div>
                                         </div>
                                         
@@ -158,6 +173,10 @@
                                             </div>
                                             
                                         </div>
+                                        @error('status')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
+                                        
                                         <div class="form-group mb-0">
                                             <div class="col-sm-offset-3 col-sm-9">
                                                 <button type="submit" class="btn btn-primary ">SUBMIT</button>
