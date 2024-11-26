@@ -2,9 +2,9 @@
 
 @section('breadcrumb')
 <div class="breadcrumb__area breadcrumb__overlay breadcrumb__height fix p-relative"
-         data-background="assets/img/breadcurmb/breadcurmb-1-10.jpg">
+         data-background="{{asset('assets/img/breadcurmb/breadcurmb-1-10.jpg')}}">
          <div class="breadcrumb-shap d-none d-xxl-block">
-            <img src="assets/img/breadcurmb/img-2.png" alt="img">
+            <img src="{{asset('assets/img/breadcurmb/img-2.png')}}" alt="img">
          </div>
          <div class="container">
             <div class="row">
@@ -23,7 +23,7 @@
                <div class="col-xl-7 col-md-7">
                   <div class="breadcrumb-img z-index-3">
                      <div class="breadcrumb-img mt-140">
-                        <img src="assets/img/breadcurmb/img.png" alt="img">
+                        <img src="{{asset('assets/img/breadcurmb/img.png')}}" alt="img">
                      </div>
                   </div>
                </div>

@@ -72,7 +72,7 @@
                         @endif
                         <h6 class="panel-title txt-dark">Export</h6>
                         <div class="pull-right">
-                            <a class="btn btn-warning" href="{{ route('specialist.create') }}"> Create New Post</a>
+                            <a class="btn btn-warning" href="{{ route('doctor.create') }}"> Add New Doctor</a>
                         </div>
                     </div>
                     <div class="clearfix"></div>

@@ -16,10 +16,10 @@
              <div class="swiper-slide fix">
                 <div class="rr-slider-2-height p-relative ">
                    <div class="rr-slider-2-bg z-index-1">
-                      <img src="assets/img/slider/bg-shape.png" alt="img">
+                      <img src="{{asset('assets/img/slider/bg-shape.png')}}" alt="img">
                    </div>
                    <div class="rr-slider-2-img">
-                      <img src="assets/img/slider/slide-main-2.jpg" alt="img">
+                      <img src="{{asset('assets/img/slider/slide-main-2.jpg')}}" alt="img">
                    </div>
                    <div class="rr-slider-2-line-shap"></div>
                    <div class="container">
@@ -27,7 +27,7 @@
                          <div class="col-xl-12">
                             <div class="rr-slider-2-content z-index-2">
                                <div class="rr-slider-2-title-box pb-25">
-                                  <h4 class="rr-slider-2-subtitle"><img src="assets/img/slider/subtitle-shape.png"
+                                  <h4 class="rr-slider-2-subtitle"><img src="{{asset('assets/img/slider/subtitle-shape.png')}}"
                                         alt="img"> Medical Services !</h4>
                                   <h1 class="rr-slider-2-title">Smart Qualified Staff <br />
                                      Trusty & Health.</h1>

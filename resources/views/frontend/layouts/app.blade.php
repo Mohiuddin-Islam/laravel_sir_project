@@ -8,21 +8,21 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <!-- Place favicon.ico in the root directory -->
-   <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+   <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/logo/favicon.png')}}">
 
    <!-- CSS here -->
-   <link rel="stylesheet" href="assets/css/bootstrap.css">
-   <link rel="stylesheet" href="assets/css/animate.css">
-   <link rel="stylesheet" href="assets/css/swiper-bundle.css">
-   <link rel="stylesheet" href="assets/css/slick.css">
-   <link rel="stylesheet" href="assets/css/style.css">
-   <link rel="stylesheet" href="assets/css/icofont.css">
-   <link rel="stylesheet" href="assets/css/icofont.min.css">
-   <link rel="stylesheet" href="assets/css/magnific-popup.css">
-   <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
-   <link rel="stylesheet" href="assets/css/spacing.css">
-   <link rel="stylesheet" href="assets/css/custom-animation.css">
-   <link rel="stylesheet" href="assets/css/main.css">
+   <link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}">
+   <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
+   <link rel="stylesheet" href="{{asset('assets/css/swiper-bundle.css')}}">
+   <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
+   <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+   <link rel="stylesheet" href="{{asset('assets/css/icofont.css')}}">
+   <link rel="stylesheet" href="{{asset('assets/css/icofont.min.css')}}">
+   <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
+   <link rel="stylesheet" href="{{asset('assets/css/font-awesome-pro.css')}}">
+   <link rel="stylesheet" href="{{asset('assets/css/spacing.css')}}">
+   <link rel="stylesheet" href="{{asset('assets/css/custom-animation.css')}}">
+   <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
 </head>
 
 <body>
@@ -64,7 +64,7 @@
                   <div class="search__top d-flex justify-content-between align-items-center">
                      <div class="search__logo">
                         <a href="index.html">
-                           <img src="assets/img/logo/logo-white.png" alt="img">
+                           <img src="{{asset('assets/img/logo/logo-white.png')}}" alt="img">
                         </a>
                      </div>
                      <div class="search__close">
@@ -113,7 +113,7 @@
          </div>
          <div class="rroffcanvas__logo">
             <a href="index.html">
-               <img src="assets/img/logo/logo-white.png" alt="img">
+               <img src="{{asset('assets/img/logo/logo-white.png')}}" alt="img">
             </a>
          </div>
          <div class="rr-main-menu-mobile d-xl-none"></div>
@@ -165,7 +165,7 @@
                <div class="col-xl-12">
                   <div class="rr-features-box-wrap p-relative">
                      <div class="rr-features-box-img d-none d-lg-block">
-                        <img src="assets/img/feature/img.jpg" alt="img">
+                        <img src="{{asset('assets/img/feature/img.jpg')}}" alt="img">
                      </div>
                      <div class="rr-features-box-item d-flex justify-content-end align-items-center">
                         <div class="rr-features-box-box d-flex align-items-center">
@@ -209,20 +209,20 @@
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                   <div class="rr-about-wapp p-relative wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                      <div class="rr-about-shap d-none d-lg-block">
-                        <img src="assets/img/about/shape-1.png" alt="img">
+                        <img src="{{asset('assets/img/about/shape-1.png')}}" alt="img">
                      </div>
                      <div class="rr-about-shap-2 d-none d-lg-block">
-                        <img src="assets/img/about/shape-2.png" alt="img">
+                        <img src="{{asset('assets/img/about/shape-2.png')}}" alt="img">
                      </div>
                      <div class="rr-about-thumb p-relative">
                         <div class="rr-about-main-img">
-                           <img src="assets/img/about/img-1.png" alt="img">
+                           <img src="{{asset('assets/img/about/img-1.png')}}" alt="img">
                         </div>
                         <div class="rr-about-sml-img d-none d-xl-block">
-                           <img src="assets/img/about/img-2.png" alt="img">
+                           <img src="{{asset('assets/img/about/img-2.png')}}" alt="img">
                         </div>
                         <div class="rr-about-sm-img text-end p-relative">
-                           <a href="#"><img src="assets/img/about/img-3.png" alt="img"></a>
+                           <a href="#"><img src="{{asset('assets/img/about/img-3.png')}}" alt="img"></a>
                            <div class="rr-slider-2-video-play">
                               <a class="popup-video" href="htrrs://www.youtube.com/watch?v=K527oNxtO7o"><i
                                     class="fa-sharp fa-regular fa-play"></i></a>
@@ -234,7 +234,7 @@
                <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                   <div class="rr-about-content p-relative rr-about-wapp">
                      <div class="rr-about-title-box mb-30">
-                        <span class="rr-section-subtitle p-relative wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s"><img src="assets/img/testimonial/section-icon.png"
+                        <span class="rr-section-subtitle p-relative wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s"><img src="{{asset('assets/img/testimonial/section-icon.png')}}"
                               alt="img"> OUR ABOUT US</span>
                         <h4 class="rr-section-title pb-15 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".4s">About Medical Immediately
                            Advanced Manual.</h4>
@@ -251,7 +251,7 @@
                      </div>
                      <div class="rr-about-tag  d-flex align-items-center mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".6s">
                         <div class="rr-about-icon">
-                           <img src="assets/img/about/about-tag.png" alt="img">
+                           <img src="{{asset('assets/img/about/about-tag.png')}}" alt="img">
                         </div>
                         <div class="rr-about-text ml-20">
                            <h4 class="rr-about-tag-title">Medical success rate solving.</h4>
@@ -259,7 +259,7 @@
                               expound the actual teachings...</p>
                         </div>
                         <div class="rr-about-img text-end ml-35">
-                           <img src="assets/img/about/img-1.jpg" alt="img">
+                           <img src="{{asset('assets/img/about/img-1.jpg')}}" alt="img">
                         </div>
                      </div>
                      <div class="rr-about-btn wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
@@ -278,8 +278,8 @@
                <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                   <div class="rr-doctors-title-box text-center mb-45">
                      <div class="rr-doctors-title-box z-index-2">
-                        <span class="rr-section-subtitle p-relative"><img src="assets/img/testimonial/section-icon.png"
-                              alt="img"> Our Best Doctors <img src="assets/img/testimonial/section-icon.png"
+                        <span class="rr-section-subtitle p-relative"><img src="{{asset('assets/img/testimonial/section-icon.png')}}"
+                              alt="img"> Our Best Doctors <img src="{{asset('assets/img/testimonial/section-icon.png')}}"
                               alt="img"></span>
                         <h4 class="rr-section-title">Experts in Range Medical Services</h4>
                      </div>
@@ -290,7 +290,7 @@
                <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                   <div class="rr-doctors-item mb-25 d-flex align-items-center justify-content-center">
                      <div class="rr-doctors-img">
-                        <img src="assets/img/team/doctor-3.png" alt="">
+                        <img src="{{asset('assets/img/team/doctor-3.png')}}" alt="">
                      </div>
                      <div class="rr-doctors-content">
                         <h4 class="rr-doctors-name"><a href="doctor-details.html">Dr. Jason Roy</a></h4>
@@ -303,7 +303,7 @@
                <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                   <div class="rr-doctors-item mb-25 d-flex align-items-center justify-content-center">
                      <div class="rr-doctors-img">
-                        <img src="assets/img/team/doctor-2.png" alt="">
+                        <img src="{{asset('assets/img/team/doctor-2.png')}}" alt="">
                      </div>
                      <div class="rr-doctors-content">
                         <h4 class="rr-doctors-name"><a href="doctor-details.html">Dr. Nadim Kamal</a></h4>
@@ -316,7 +316,7 @@
                <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
                   <div class="rr-doctors-item mb-25 d-flex align-items-center justify-content-center">
                      <div class="rr-doctors-img">
-                        <img src="assets/img/team/doctor-1.png" alt="">
+                        <img src="{{asset('assets/img/team/doctor-1.png')}}" alt="">
                      </div>
                      <div class="rr-doctors-content">
                         <h4 class="rr-doctors-name"><a href="doctor-details.html">Dr. Zinia Zara</a></h4>
@@ -329,7 +329,7 @@
                <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
                   <div class="rr-doctors-item mb-25 d-flex align-items-center justify-content-center">
                      <div class="rr-doctors-img">
-                        <img src="assets/img/team/team-img-6.png" alt="">
+                        <img src="{{asset('assets/img/team/team-img-6.png')}}" alt="">
                      </div>
                      <div class="rr-doctors-content">
                         <h4 class="rr-doctors-name"><a href="doctor-details.html">Dr. Nadim Kamal </a></h4>
@@ -357,35 +357,35 @@
                <div class="col-xl-12">
                   <div class="rr-blog-title-box text-center mb-60 p-relative">
                      <span class="rr-section-subtitle  rr-section-border-rl"><img
-                           src="assets/img/testimonial/section-icon.png" alt="img"> More Brands work <img
-                           src="assets/img/testimonial/section-icon.png" alt="img"></span>
+                           src="{{asset('assets/img/testimonial/section-icon.png')}}" alt="img"> More Brands work <img
+                           src="{{asset('assets/img/testimonial/section-icon.png')}}" alt="img"></span>
                   </div>
                   <div class="rr-brand-wrapper rr-brand-border pb-70">
                      <div class="swiper-container rr-brand-active">
                         <div class="swiper-wrapper">
                            <div class="swiper-slide">
                               <div class="rr-brand-item text-center">
-                                 <img src="assets/img/brand/brand-1-1.png" alt="img">
+                                 <img src="{{asset('assets/img/brand/brand-1-1.png')}}" alt="img">
                               </div>
                            </div>
                            <div class="swiper-slide">
                               <div class="rr-brand-item text-center">
-                                 <img src="assets/img/brand/brand-1-2.png" alt="img">
+                                 <img src="{{asset('assets/img/brand/brand-1-2.png')}}" alt="img">
                               </div>
                            </div>
                            <div class="swiper-slide">
                               <div class="rr-brand-item text-center">
-                                 <img src="assets/img/brand/brand-1-3.png" alt="img">
+                                 <img src="{{asset('assets/img/brand/brand-1-3.png')}}" alt="img">
                               </div>
                            </div>
                            <div class="swiper-slide">
                               <div class="rr-brand-item text-center">
-                                 <img src="assets/img/brand/brand-1-4.png" alt="img">
+                                 <img src="{{asset('assets/img/brand/brand-1-4.png')}}" alt="img">
                               </div>
                            </div>
                            <div class="swiper-slide">
                               <div class="rr-brand-item text-center">
-                                 <img src="assets/img/brand/brand-1-3.png" alt="img">
+                                 <img src="{{asset('assets/img/brand/brand-1-3.png')}}" alt="img">
                               </div>
                            </div>
                         </div>
@@ -404,10 +404,10 @@
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                      <div class="rr-funfact-content text-center fix p-relative">
                         <div class="rr-funfact_shap">
-                           <img src="assets/img/footer/footer-shap.png" alt="img">
+                           <img src="{{asset('assets/img/footer/footer-shap.png')}}" alt="img">
                         </div>
                         <div class="rr-funfact-icon">
-                           <img src="assets/img/counter/icon1.png" alt="img">
+                           <img src="{{asset('assets/img/counter/icon1.png')}}" alt="img">
                         </div>
                         <div class="rr-funfact-number d-flex align-items-center justify-content-center">
                            <h5 class="rr-funfact-number purecounter" data-purecounter-duration="1"
@@ -422,10 +422,10 @@
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                      <div class="rr-funfact-content text-center mt-20 fix p-relative rr-funfact-content-2">
                         <div class="rr-funfact_shap">
-                           <img src="assets/img/footer/footer-shap.png" alt="img">
+                           <img src="{{asset('assets/img/footer/footer-shap.png')}}" alt="img">
                         </div>
                         <div class="rr-funfact-icon">
-                           <img src="assets/img/counter/icon2.png" alt="img">
+                           <img src="{{asset('assets/img/counter/icon2.png')}}" alt="img">
                         </div>
                         <div class="rr-funfact-number d-flex align-items-center justify-content-center">
                            <h5 class="rr-funfact-number purecounter" data-purecounter-duration="1"
@@ -440,10 +440,10 @@
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
                      <div class="rr-funfact-content text-center fix p-relative">
                         <div class="rr-funfact_shap">
-                           <img src="assets/img/footer/footer-shap.png" alt="img">
+                           <img src="{{asset('assets/img/footer/footer-shap.png')}}" alt="img">
                         </div>
                         <div class="rr-funfact-icon">
-                           <img src="assets/img/counter/icon3.png" alt="img">
+                           <img src="{{asset('assets/img/counter/icon3.png')}}" alt="img">
                         </div>
                         <div class="rr-funfact-number d-flex align-items-center justify-content-center">
                            <h5 class="rr-funfact-number purecounter" data-purecounter-duration="1"
@@ -458,10 +458,10 @@
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
                      <div class="rr-funfact-content text-center mt-20 fix p-relative rr-funfact-content-2">
                         <div class="rr-funfact_shap">
-                           <img src="assets/img/footer/footer-shap.png" alt="img">
+                           <img src="{{asset('assets/img/footer/footer-shap.png')}}" alt="img">
                         </div>
                         <div class="rr-funfact-icon">
-                           <img src="assets/img/counter/icon4.png" alt="img">
+                           <img src="{{asset('assets/img/counter/icon4.png')}}" alt="img">
                         </div>
                         <div class="rr-funfact-number d-flex align-items-center justify-content-center">
                            <h5 class="rr-funfact-number purecounter" data-purecounter-duration="1"
@@ -479,14 +479,14 @@
       </div>
       <!-- funfact area end -->
       <!-- service area start -->
-      <section class="rr-service-area rr-service-height rr-service-wapp" data-background="assets/img/team/shap-bg.png">
+      <section class="rr-service-area rr-service-height rr-service-wapp" data-background="{{asset('assets/img/team/shap-bg.png')}}">
          <div class="container">
             <div class="row">
                <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                   <div class="rr-price-2-title-box text-center mb-45">
                      <div class="rr-video-title-box z-index-2">
-                        <span class="rr-video-subtitle p-relative"><img src="assets/img/testimonial/section-icon.png"
-                              alt="img"> Our Best Service <img src="assets/img/testimonial/section-icon.png"
+                        <span class="rr-video-subtitle p-relative"><img src="{{asset('assets/img/testimonial/section-icon.png')}}"
+                              alt="img"> Our Best Service <img src="{{asset('assets/img/testimonial/section-icon.png')}}"
                               alt="img"></span>
                         <h4 class="rr-video-title">Experts in Range Medical Services</h4>
                      </div>
@@ -502,7 +502,7 @@
                               <span>01</span>
                            </div>
                            <div class="rr-service-icon">
-                              <img src="assets/img/service/medicine.png" alt="img">
+                              <img src="{{asset('assets/img/service/medicine.png')}}" alt="img">
                            </div>
                            <div class="rr-service-info ml-80">
                               <h3 class="rr-service-title"><a href="service-details.html">Medicine & Health</a></h3>
@@ -517,7 +517,7 @@
                         </div>
 
                         <div class="rr-service-thumb">
-                           <img class="w-100" src="assets/img/service/bg-1-1.jpg" alt="img">
+                           <img class="w-100" src="{{asset('assets/img/service/bg-1-1.jpg')}}" alt="img">
                         </div>
                      </div>
                   </div>
@@ -528,7 +528,7 @@
                               <span>02</span>
                            </div>
                            <div class="rr-service-icon">
-                              <img src="assets/img/service/medicine2.png" alt="img">
+                              <img src="{{asset('assets/img/service/medicine2.png')}}" alt="img">
                            </div>
                            <div class="rr-service-info ml-80">
                               <h3 class="rr-service-title"><a href="service-details.html">Heart-Beat Service</a></h3>
@@ -543,7 +543,7 @@
                         </div>
 
                         <div class="rr-service-thumb">
-                           <img class="w-100" src="assets/img/service/bg-1-2.jpg" alt="img">
+                           <img class="w-100" src="{{asset('assets/img/service/bg-1-2.jpg')}}" alt="img">
                         </div>
                      </div>
                   </div>
@@ -554,7 +554,7 @@
                               <span>03</span>
                            </div>
                            <div class="rr-service-icon">
-                              <img src="assets/img/service/medicine3.png" alt="img">
+                              <img src="{{asset('assets/img/service/medicine3.png')}}" alt="img">
                            </div>
                            <div class="rr-service-info ml-80">
                               <h3 class="rr-service-title"><a href="service-details.html">Economical Choice</a></h3>
@@ -569,7 +569,7 @@
                         </div>
 
                         <div class="rr-service-thumb">
-                           <img class="w-100" src="assets/img/service/bg-1-3.jpg" alt="img">
+                           <img class="w-100" src="{{asset('assets/img/service/bg-1-3.jpg')}}" alt="img">
                         </div>
                      </div>
                   </div>
@@ -590,8 +590,8 @@
             <div class="row">
                <div class="col-lg-6 col-md-6">
                   <div class="rr-project-title-wrapper ">
-                     <span class="rr-section-subtitle wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s"><img src="assets/img/testimonial/section-icon.png" alt="img">
-                        OUR BEST PROJECTS <img src="assets/img/testimonial/section-icon.png" alt="img"></span>
+                     <span class="rr-section-subtitle wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s"><img src="{{asset('assets/img/testimonial/section-icon.png')}}" alt="img">
+                        OUR BEST PROJECTS <img src="{{asset('assets/img/testimonial/section-icon.png')}}" alt="img"></span>
                      <h3 class="rr-section-title rr-section-title-space wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">Work Gallery Medical This
                         Recent Projects.</h3>
                   </div>
@@ -641,7 +641,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project1.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project1.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Home Visit</a></h4>
                                           <p>Clinic</p>
@@ -655,7 +655,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project2.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project2.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Investigations</a></h4>
                                           <p>Family</p>
@@ -669,7 +669,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project3.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project3.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Cardiology</a></h4>
                                           <p> Medical / Team</p>
@@ -683,7 +683,7 @@
                               <div class="col-lg-8 col-md-8">
                                  <div class="rr-project-item rr-project-padding">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project4.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project4.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Economical
                                                 Choice</a></h4>
@@ -698,7 +698,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project5.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project5.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Pediatrics Care</a></h4>
                                           <p>Pediatrics</p>
@@ -718,7 +718,7 @@
                            <div class="col-lg-4 col-md-4">
                               <div class="rr-project-item">
                                  <div class="rr-project-thumb mb-25 p-relative">
-                                    <img class="w-100" src="assets/img/project/project2.jpg" alt="img">
+                                    <img class="w-100" src="{{asset('assets/img/project/project2.jpg')}}" alt="img">
                                     <div class="rr-project-thumb-info">
                                        <h4 class="rr-project-thumb-title"><a href="project-details.html">Home Visit</a></h4>
                                        <p>Clinic</p>
@@ -732,7 +732,7 @@
                            <div class="col-lg-4 col-md-4">
                               <div class="rr-project-item">
                                  <div class="rr-project-thumb mb-25 p-relative">
-                                    <img class="w-100" src="assets/img/project/project1.jpg" alt="img">
+                                    <img class="w-100" src="{{asset('assets/img/project/project1.jpg')}}" alt="img">
                                     <div class="rr-project-thumb-info">
                                        <h4 class="rr-project-thumb-title"><a href="project-details.html">Investigations</a></h4>
                                        <p>Family</p>
@@ -746,7 +746,7 @@
                            <div class="col-lg-4 col-md-4">
                               <div class="rr-project-item">
                                  <div class="rr-project-thumb mb-25 p-relative">
-                                    <img class="w-100" src="assets/img/project/project3.jpg" alt="img">
+                                    <img class="w-100" src="{{asset('assets/img/project/project3.jpg')}}" alt="img">
                                     <div class="rr-project-thumb-info">
                                        <h4 class="rr-project-thumb-title"><a href="project-details.html">Cardiology</a></h4>
                                        <p> Medical / Team</p>
@@ -760,7 +760,7 @@
                            <div class="col-lg-8 col-md-8">
                               <div class="rr-project-item rr-project-padding">
                                  <div class="rr-project-thumb mb-25 p-relative">
-                                    <img class="w-100" src="assets/img/project/project4.jpg" alt="img">
+                                    <img class="w-100" src="{{asset('assets/img/project/project4.jpg')}}" alt="img">
                                     <div class="rr-project-thumb-info">
                                        <h4 class="rr-project-thumb-title"><a href="project-details.html">Economical
                                              Choice</a></h4>
@@ -775,7 +775,7 @@
                            <div class="col-lg-4 col-md-4">
                               <div class="rr-project-item">
                                  <div class="rr-project-thumb mb-25 p-relative">
-                                    <img class="w-100" src="assets/img/project/project5.jpg" alt="img">
+                                    <img class="w-100" src="{{asset('assets/img/project/project5.jpg')}}" alt="img">
                                     <div class="rr-project-thumb-info">
                                        <h4 class="rr-project-thumb-title"><a href="project-details.html">Pediatrics Care</a></h4>
                                        <p>Pediatrics</p>
@@ -794,7 +794,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project1.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project1.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Home Visit</a></h4>
                                           <p>Clinic</p>
@@ -808,7 +808,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project2.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project2.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Investigations</a></h4>
                                           <p>Family</p>
@@ -822,7 +822,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project3.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project3.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Cardiology</a></h4>
                                           <p> Medical / Team</p>
@@ -836,7 +836,7 @@
                               <div class="col-lg-8 col-md-8">
                                  <div class="rr-project-item rr-project-padding">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project4.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project4.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Economical
                                                 Choice</a></h4>
@@ -851,7 +851,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project5.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project5.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Pediatrics Care</a></h4>
                                           <p>Pediatrics</p>
@@ -870,7 +870,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project2.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project2.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Home Visit</a></h4>
                                           <p>Clinic</p>
@@ -884,7 +884,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project1.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project1.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Investigations</a></h4>
                                           <p>Family</p>
@@ -898,7 +898,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project3.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project3.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Cardiology</a></h4>
                                           <p> Medical / Team</p>
@@ -912,7 +912,7 @@
                               <div class="col-lg-8 col-md-8">
                                  <div class="rr-project-item rr-project-padding">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project4.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project4.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Economical
                                                 Choice</a></h4>
@@ -927,7 +927,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project5.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project5.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Pediatrics Care</a></h4>
                                           <p>Pediatrics</p>
@@ -947,7 +947,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project1.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project1.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Home Visit</a></h4>
                                           <p>Clinic</p>
@@ -961,7 +961,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project2.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project2.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Investigations</a></h4>
                                           <p>Family</p>
@@ -975,7 +975,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project3.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project3.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Cardiology</a></h4>
                                           <p> Medical / Team</p>
@@ -989,7 +989,7 @@
                               <div class="col-lg-8 col-md-8">
                                  <div class="rr-project-item rr-project-padding">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project4.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project4.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Economical
                                                 Choice</a></h4>
@@ -1004,7 +1004,7 @@
                               <div class="col-lg-4 col-md-4">
                                  <div class="rr-project-item">
                                     <div class="rr-project-thumb mb-25 p-relative">
-                                       <img class="w-100" src="assets/img/project/project5.jpg" alt="img">
+                                       <img class="w-100" src="{{asset('assets/img/project/project5.jpg')}}" alt="img">
                                        <div class="rr-project-thumb-info">
                                           <h4 class="rr-project-thumb-title"><a href="project-details.html">Pediatrics Care</a></h4>
                                           <p>Pediatrics</p>
@@ -1028,13 +1028,13 @@
       </section>
       <!-- project area end -->
       <!-- call area start -->
-      <section class="rr-call-area rr-call-shap p-relative pt-35 pb-35 fix" data-background="assets/img/contact/contact-bg.jpg">
+      <section class="rr-call-area rr-call-shap p-relative pt-35 pb-35 fix" data-background="{{asset('assets/img/contact/contact-bg.jpg')}}">
          <div class="container">
             <div class="row align-items-center justify-content-between">
                <div class="col-xl-8 col-lg-7 col-md-8 col-12">
                   <div class="rr-call-warap d-flex align-items-center z-index-2">
                      <div class="rr-call-icon">
-                        <img src="assets/img/contact/call.png" alt="img">
+                        <img src="{{asset('assets/img/contact/call.png')}}" alt="img">
                      </div>
                      <div class="rr-call-info">
                         <h3>Immediately Call Medical Health Care</h3>
@@ -1059,7 +1059,7 @@
                <div class="col-xl-6 col-lg-6 col-md-6 wow rrfadeLeft" data-wow-duration=".9s" data-wow-delay=".7s">
                   <div class="rr-faq-left z-index-3">
                      <div class="rr-faq-title-box pb-25">
-                        <span class="rr-section-subtitle"><img src="assets/img/testimonial/section-icon.png" alt="img">
+                        <span class="rr-section-subtitle"><img src="{{asset('assets/img/testimonial/section-icon.png')}}" alt="img">
                            OUR FAQ NOW</span>
                         <h4 class="rr-section-title  rr-section-title-space">Medical Team Question <br/>
                            Faq This Advanced .</h4>
@@ -1147,7 +1147,7 @@
                </div>
                <div class="col-xl-6 col-lg-6 col-md-6 wow rrfadeLeft" data-wow-duration=".9s" data-wow-delay=".5s">
                   <div class="rr-faq-thumb">
-                     <img src="assets/img/faq/thumb-1-1.png" alt="img">
+                     <img src="{{asset('assets/img/faq/thumb-1-1.png')}}" alt="img">
                   </div>
                </div>
             </div>
@@ -1210,10 +1210,10 @@
       <!-- contact area start -->
       <section class="rr-contact-area p-relative black-bg fix">
          <div class="rr-contact-shap">
-            <img src="assets/img/contact/shap01.png" alt="img">
+            <img src="{{asset('assets/img/contact/shap01.png')}}" alt="img">
          </div>
          <div class="rr-contact-img">
-            <img src="assets/img/contact/contact-img.jpg" alt="img">
+            <img src="{{asset('assets/img/contact/contact-img.jpg')}}" alt="img">
          </div>
          <div class="container">
             <div class="row">
@@ -1286,8 +1286,8 @@
                <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                   <div class="rr-price-2-title-box text-center mb-45">
                      <div class="rr-video-title-box z-index-2">
-                        <span class="rr-video-subtitle p-relative"><img src="assets/img/testimonial/section-icon.png"
-                              alt="img"> Our testimonials Say <img src="assets/img/testimonial/section-icon.png"
+                        <span class="rr-video-subtitle p-relative"><img src="{{asset('assets/img/testimonial/section-icon.png')}}"
+                              alt="img"> Our testimonials Say <img src="{{asset('assets/img/testimonial/section-icon.png')}}"
                               alt="img"></span>
                         <h4 class="rr-section-title">We Are People Say Doctor</h4>
                      </div>
@@ -1298,7 +1298,7 @@
                            <div class="swiper-slide wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                               <div class="rr-testimonial-item p-relative">
                                  <div class="rr-testimonial-shap">
-                                    <img src="assets/img/testimonial/testimonial-icon.png" alt="img">
+                                    <img src="{{asset('assets/img/testimonial/testimonial-icon.png')}}" alt="img">
                                  </div>
                                  <div class="rr-testimonial-quote">
                                     <i class="fa-solid fa-quote-right"></i>
@@ -1326,14 +1326,14 @@
                                     
                                  </div>
                                  <div class="rr-testimonial-author-thumb">
-                                    <img src="assets/img/testimonial/avada-5.png" alt="img">
+                                    <img src="{{asset('assets/img/testimonial/avada-5.png')}}" alt="img">
                                  </div>
                               </div>
                            </div>
                            <div class="swiper-slide wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                               <div class="rr-testimonial-item p-relative">
                                  <div class="rr-testimonial-shap">
-                                    <img src="assets/img/testimonial/testimonial-icon.png" alt="img">
+                                    <img src="{{asset('assets/img/testimonial/testimonial-icon.png')}}" alt="img">
                                  </div>
                                  <div class="rr-testimonial-quote">
                                     <i class="fa-solid fa-quote-right"></i>
@@ -1360,14 +1360,14 @@
                                     <span><i class="fa-solid fa-star"></i></span>
                                  </div>
                                  <div class="rr-testimonial-author-thumb">
-                                    <img src="assets/img/testimonial/avada-2.png" alt="img">
+                                    <img src="{{asset('assets/img/testimonial/avada-2.png')}}" alt="img">
                                  </div>
                               </div>
                            </div>
                            <div class="swiper-slide wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
                               <div class="rr-testimonial-item p-relative">
                                  <div class="rr-testimonial-shap">
-                                    <img src="assets/img/testimonial/testimonial-icon.png" alt="img">
+                                    <img src="{{asset('assets/img/testimonial/testimonial-icon.png')}}" alt="img">
                                  </div>
                                  <div class="rr-testimonial-quote">
                                     <i class="fa-solid fa-quote-right"></i>
@@ -1394,7 +1394,7 @@
                                     <span><i class="fa-solid fa-star"></i></span>
                                  </div>
                                  <div class="rr-testimonial-author-thumb">
-                                    <img src="assets/img/testimonial/avada-4.png" alt="img">
+                                    <img src="{{asset('assets/img/testimonial/avada-4.png')}}" alt="img">
                                  </div>
                               </div>
                            </div>
@@ -1413,7 +1413,7 @@
          <div class="container">
             <div class="row wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                <div class="rr-features-3-title-box text-center mb-45">
-                  <span class="rr-section-subtitle p-relative"><img src="assets/img/testimonial/section-icon.png" alt="img"> Our Best Features <img src="assets/img/testimonial/section-icon.png" alt="img"></span>
+                  <span class="rr-section-subtitle p-relative"><img src="{{asset('assets/img/testimonial/section-icon.png')}}" alt="img"> Our Best Features <img src="assets/img/testimonial/section-icon.png" alt="img"></span>
                   <h4 class="rr-section-title  rr-section-title-space">Experts in Range Medical Features</h4>
                </div>
             </div>
@@ -1507,8 +1507,8 @@
             <div class="row">
                <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                   <div class="rr-price-2-title-box text-center mb-45">
-                     <span class="rr-section-subtitle p-relative"><img src="assets/img/testimonial/section-icon.png"
-                           alt="img"> Our popular pricing <img src="assets/img/testimonial/section-icon.png"
+                     <span class="rr-section-subtitle p-relative"><img src="{{asset('assets/img/testimonial/section-icon.png')}}"
+                           alt="img"> Our popular pricing <img src="{{asset('assets/img/testimonial/section-icon.png')}}"
                            alt="img"></span>
                      <h4 class="rr-section-title rr-section-title-space">Medical Terms Pricing Package</h4>
                   </div>
@@ -1520,7 +1520,7 @@
                         <h4 class="rr-price-2-rate pb-30">$100 <b>/Per Month</b></h4>
                      </div>
                      <div class="rr-price-2-shap">
-                        <img src="assets/img/testimonial/pricing.png" alt="img">
+                        <img src="{{asset('assets/img/testimonial/pricing.png')}}" alt="img">
                      </div>
                      <div class="rr-price-2-list">
                         <ul>
@@ -1538,14 +1538,14 @@
                <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                   <div class="rr-price-2-item p-relative active">
                      <div class="rr-price-2-shap-side-icon">
-                        <img src="assets/img/testimonial/icon.png" alt="img">
+                        <img src="{{asset('assets/img/testimonial/icon.png')}}" alt="img">
                      </div>
                      <div class="rr-price-2-top">
                         <span>ADVANCED</span>
                         <h4 class="rr-price-2-rate pb-30">$200 <b>/Per Month</b></h4>
                      </div>
                      <div class="rr-price-2-shap">
-                        <img src="assets/img/testimonial/pricing.png" alt="img">
+                        <img src="{{asset('assets/img/testimonial/pricing.png')}}" alt="img">
                      </div>
                      <div class="rr-price-2-list">
                         <ul>
@@ -1567,7 +1567,7 @@
                         <h4 class="rr-price-2-rate pb-30">$500 <b>/Per Years</b></h4>
                      </div>
                      <div class="rr-price-2-shap">
-                        <img src="assets/img/testimonial/pricing.png" alt="img">
+                        <img src="{{asset('assets/img/testimonial/pricing.png')}}" alt="img">
                      </div>
                      <div class="rr-price-2-list">
                         <ul>
@@ -1603,7 +1603,7 @@
                      <div class="rr-blog-thumb-main p-relative">
                         <a href="blog-details.html">
                            <div class="rr-blog-thumb rr-blog-wid">
-                              <img src="assets/img/blog/1.jpg" alt="img">
+                              <img src="{{asset('assets/img/blog/1.jpg')}}" alt="img">
                            </div>
                         </a>
                         <div class="rr-blog-cat">
@@ -1623,7 +1623,7 @@
                         </div>
                         <div class="rr-blog-item-user d-flex align-items-center">
                            <div class="rr-blog-item-user-thumb">
-                              <img src="assets/img/blog/avada.png" alt="img">
+                              <img src="{{asset('assets/img/blog/avada.png')}}" alt="img">
                            </div>
                            <div class="rr-blog-item-user-content">
                               <span class="rr-blog-item-user-title"><a href="blog-details.html">Dr: Meran Bara</a></span>
@@ -1637,7 +1637,7 @@
                      <div class="rr-blog-thumb-main p-relative">
                         <a href="blog-details.html">
                            <div class="rr-blog-thumb rr-blog-wid">
-                              <img src="assets/img/blog/2.jpg" alt="img">
+                              <img src="{{asset('assets/img/blog/2.jpg')}}" alt="img">
                            </div>
                         </a>
                         <div class="rr-blog-cat">
@@ -1656,7 +1656,7 @@
                         </div>
                         <div class="rr-blog-item-user d-flex align-items-center">
                            <div class="rr-blog-item-user-thumb">
-                              <img src="assets/img/blog/avada.png" alt="img">
+                              <img src="{{asset('assets/img/blog/avada.png')}}" alt="img">
                            </div>
                            <div class="rr-blog-item-user-content">
                               <span class="rr-blog-item-user-title"><a href="blog-details.html">Dr: Meran Bara</a></span>
@@ -1670,7 +1670,7 @@
                      <div class="rr-blog-thumb-main p-relative">
                         <a href="blog-details.html">
                            <div class="rr-blog-thumb rr-blog-wid">
-                              <img src="assets/img/blog/4.jpg" alt="img">
+                              <img src="{{asset('assets/img/blog/4.jpg')}}" alt="img">
                            </div>
                         </a>
                         <div class="rr-blog-cat">
@@ -1689,7 +1689,7 @@
                         </div>
                         <div class="rr-blog-item-user d-flex align-items-center">
                            <div class="rr-blog-item-user-thumb">
-                              <img src="assets/img/blog/avada.png" alt="img">
+                              <img src="{{asset('assets/img/blog/avada.png')}}" alt="img">
                            </div>
                            <div class="rr-blog-item-user-content">
                               <span class="rr-blog-item-user-title"><a href="blog-details.html">Dr: Meran Bara</a></span>
@@ -1703,7 +1703,7 @@
                      <div class="rr-blog-thumb-main p-relative">
                         <a href="blog-details.html">
                            <div class="rr-blog-thumb rr-blog-wid">
-                              <img src="assets/img/blog/5.jpg" alt="img">
+                              <img src="{{asset('assets/img/blog/5.jpg')}}" alt="img">
                            </div>
                         </a>
                         <div class="rr-blog-cat">
@@ -1722,7 +1722,7 @@
                         </div>
                         <div class="rr-blog-item-user d-flex align-items-center">
                            <div class="rr-blog-item-user-thumb">
-                              <img src="assets/img/blog/avada.png" alt="img">
+                              <img src="{{asset('assets/img/blog/avada.png')}}" alt="img">
                            </div>
                            <div class="rr-blog-item-user-content">
                               <span class="rr-blog-item-user-title"><a href="blog-details.html">Dr: Meran Bara</a></span>
@@ -1743,7 +1743,7 @@
                <div class="col-xl-6 col-lg-6 col-md-6 wow rrfadeUp">
                   <div class="rr-cta-left-box d-flex align-items-center">
                      <div class="rr-cta-icon">
-                        <img src="assets/img/footer/email-icon.png" alt="img">
+                        <img src="{{asset('assets/img/footer/email-icon.png')}}" alt="img">
                      </div>
                      <div class="rr-cta-content ml-20">
                         <h4 class="rr-cta-title">Our Newslatter</h4>
@@ -1769,12 +1769,12 @@
 
 
    <footer>
-      <div class="rr-footer-main p-relative fix" data-background="assets/img/footer/footer-bg.jpg">
+      <div class="rr-footer-main p-relative fix" data-background="{{asset('assets/img/footer/footer-bg.jpg')}}">
 
        <!-- footer area start -->
        <div class="rr-footer-area pt-125 p-relative fix">
          <div class="rr-footer-right-shap d-none d-xl-block">
-            <img src="assets/img/footer/footer-shap.png" alt="img">
+            <img src="{{asset('assets/img/footer/footer-shap.png')}}" alt="img">
          </div>
          <div class="container">
             <div class="rr-footer-border">
@@ -1783,7 +1783,7 @@
                      data-wow-delay=".3s">
                      <div class="rr-footer-widget footer-cols-1">
                         <div class="rr-footer-logo pb-35">
-                           <a href="index.html"><img src="assets/img/logo/logo-white.png" alt="img"></a>
+                           <a href="index.html"><img src="{{asset('assets/img/logo/logo-white.png')}}" alt="img"></a>
                         </div>
                         <div class="rr-footer-widget-content-list mb-25">
                            <div class="rr-footer-widget-content-list-item">
@@ -1883,22 +1883,22 @@
    </footer>
 
    <!-- JS here -->
-   <script src="assets/js/vendor/jquery.js"></script>
-   <script src="assets/js/vendor/waypoints.js"></script>
-   <script src="assets/js/bootstrap-bundle.js"></script>
-   <script src="assets/js/ajax-form.js"></script>
-   <script src="assets/js/imagesloaded-pkgd.js"></script>
-   <script src="assets/js/isotope-pkgd.js"></script>
-   <script src="assets/js/jarallax.js"></script>
-   <script src="assets/js/magnific-popup.js"></script>
-   <script src="assets/js/nice-select.js"></script>
-   <script src="assets/js/purecounter.js"></script>
-   <script src="assets/js/jquery-knob.js"></script>
-   <script src="assets/js/jquery-appear.js"></script>
-   <script src="assets/js/wow.js"></script>
-   <script src="assets/js/slick.js"></script>
-   <script src="assets/js/swiper-bundle.js"></script>
-   <script src="assets/js/main.js"></script>
+   <script src="{{asset('assets/js/vendor/jquery.js')}}"></script>
+   <script src="{{asset('assets/js/vendor/waypoints.js')}}"></script>
+   <script src="{{asset('assets/js/bootstrap-bundle.js')}}"></script>
+   <script src="{{asset('assets/js/ajax-form.js')}}"></script>
+   <script src="{{asset('assets/js/imagesloaded-pkgd.js')}}"></script>
+   <script src="{{asset('assets/js/isotope-pkgd.js')}}"></script>
+   <script src="{{asset('assets/js/jarallax.js')}}"></script>
+   <script src="{{asset('assets/js/magnific-popup.js')}}"></script>
+   <script src="{{asset('assets/js/nice-select.js')}}"></script>
+   <script src="{{asset('assets/js/purecounter.js')}}"></script>
+   <script src="{{asset('assets/js/jquery-knob.js')}}"></script>
+   <script src="{{asset('assets/js/jquery-appear.js')}}"></script>
+   <script src="{{asset('assets/js/wow.js')}}"></script>
+   <script src="{{asset('assets/js/slick.js')}}"></script>
+   <script src="{{asset('assets/js/swiper-bundle.js')}}"></script>
+   <script src="{{asset('assets/js/main.js')}}"></script>
 
 </body>
 

@@ -1,11 +1,11 @@
 <header class="rr-header-height ">
     <!-- header area start -->
-    <div id="header-sticky" class="rr-header-area rr-header-2-border" data-background="assets/img/slider/header-bg-shape.png">
+    <div id="header-sticky" class="rr-header-area rr-header-2-border" data-background="{{asset('assets/img/slider/header-bg-shape.png')}}">
        <div class="container custom-container-1">
           <div class="row align-items-center">
              <div class="col-xl-2 col-lg-4 col-6">
                 <div class="rr-header-logo">
-                   <a href="index.html"><img src="assets/img/logo/logo-white.png" alt="img"></a>
+                   <a href="index.html"><img src="{{asset('assets/img/logo/logo-white.png')}}" alt="img"></a>
                 </div>
              </div>
              <div class="col-xl-7 d-none d-xl-block">
@@ -18,7 +18,7 @@
                                <div class="row gx-6 row-cols-1 row-cols-md-2 row-cols-xl-4">
                                   <div class="col homemenu">
                                      <div class="homemenu-thumb mb-15">
-                                        <img src="assets/img/menu/home-1.jpg" alt="img">
+                                        <img src="{{asset('assets/img/menu/home-1.jpg')}}" alt="img">
                                         <div class="homemenu-btn">
                                            <a class="rr-menu-btn" href="index.html">Home 01</a>
                                         </div>
@@ -31,7 +31,7 @@
                                   </div>
                                   <div class="col homemenu">
                                      <div class="homemenu-thumb mb-15">
-                                        <img src="assets/img/menu/home-2.jpg" alt="img">
+                                        <img src="{{asset('assets/img/menu/home-2.jpg')}}" alt="img">
                                         <div class="homemenu-btn">
                                            <a class="rr-menu-btn" href="index-2.html">Home 02</a>
                                         </div>
@@ -44,7 +44,7 @@
                                   </div>
                                   <div class="col homemenu">
                                      <div class="homemenu-thumb mb-15">
-                                        <img src="assets/img/menu/home-3.jpg" alt="img">
+                                        <img src="{{asset('assets/img/menu/home-3.jpg')}}" alt="img">
                                         <div class="homemenu-btn">
                                            <a class="rr-menu-btn" href="index-3.html">Home 03</a>
                                         </div>
@@ -57,7 +57,7 @@
                                   </div>
                                   <div class="col homemenu">
                                      <div class="homemenu-thumb mb-15">
-                                        <img src="assets/img/menu/home-4.jpg" alt="img">
+                                        <img src="{{asset('assets/img/menu/home-4.jpg')}}" alt="img">
                                         <div class="homemenu-btn">
                                            <a class="rr-menu-btn" href="index-4.html">Home 04</a>
                                         </div>

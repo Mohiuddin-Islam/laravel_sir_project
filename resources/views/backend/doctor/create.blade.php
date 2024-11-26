@@ -154,7 +154,7 @@
                                             <label for="exampleInputuname_4" class="col-sm-3 control-label">Photo</label>
                                             <div class="col-sm-9">
                                                 <div class="input-group">
-                                                    <input type="file" name="photo" class="form-control" id="exampleInputuname_4" placeholder="Enter Confirm Password">
+                                                    <input type="file" name="photo" class="form-control" id="exampleInputuname_4">
                                                     <div class="input-group-addon"><i class="icon-user"></i></div>
                                                 </div>
                                             </div>
