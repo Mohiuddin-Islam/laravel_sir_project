@@ -26,10 +26,7 @@
 </head>
 
 <body>
-   <!--[if lte IE 9]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="htrrs://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-      <![endif]-->
-
+   
 <!-- preloader start -->
 <div id="loading">
    <div class="preloader-close">x</div>
