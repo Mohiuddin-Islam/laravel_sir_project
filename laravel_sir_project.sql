@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3310
--- Generation Time: Nov 26, 2024 at 08:20 AM
+-- Generation Time: Nov 27, 2024 at 08:22 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,6 +43,24 @@ CREATE TABLE `admins` (
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Mohiuddin', 'admin@gmail.com', '$2y$10$FScFRilXoBC81hmrOtCOBetWRQUebPFK3r0x1u11KB3Ni4lIRePYC', NULL, '2024-11-21 01:09:49', '2024-11-21 01:09:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointments`
+--
+
+CREATE TABLE `appointments` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(50) NOT NULL,
+  `doctor_id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `remarks` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -115,7 +133,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (18, '2019_12_14_000001_create_personal_access_tokens_table', 1),
 (19, '2024_11_18_063438_create_admins_table', 1),
 (20, '2024_11_19_041903_create_doctors_table', 1),
-(21, '2024_11_20_042519_create_specialists_table', 1);
+(21, '2024_11_20_042519_create_specialists_table', 1),
+(22, '2024_11_27_062248_create_appointments_table', 2);
 
 -- --------------------------------------------------------
 
@@ -215,6 +234,12 @@ ALTER TABLE `admins`
   ADD UNIQUE KEY `admins_email_unique` (`email`);
 
 --
+-- Indexes for table `appointments`
+--
+ALTER TABLE `appointments`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `doctors`
 --
 ALTER TABLE `doctors`
@@ -272,6 +297,12 @@ ALTER TABLE `admins`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `appointments`
+--
+ALTER TABLE `appointments`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
@@ -287,7 +318,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
