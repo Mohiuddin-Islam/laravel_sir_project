@@ -13,7 +13,7 @@
                 <div class="col-xl-6 col-lg-3 col-md-1"></div>
                 <div class="col-xl-4 col-lg-9 col-md-10">
                     <div class="rr-form-box text-center">
-                     @if (session('msg'))
+                    @if (session('msg'))
                             <div class="alert alert-success">{{ session('msg') }}</div>
                         @endif
                         <b>OUR Booking Now</b>
@@ -53,7 +53,7 @@
                                             <option value="">Choose Doctor</option>
                                             @foreach ($doctors as $doctor)
                                                 <option value="{{ $doctor->id }}" @selected(old('doctor')==$doctor->id)>{{$doctor->name}} ||
-                                                   {{ $doctor->specialist->name }}</option>
+                                                {{ $doctor->specialist->name }}</option>
                                             @endforeach
                                         </select>
 
