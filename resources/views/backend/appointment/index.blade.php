@@ -72,7 +72,8 @@
                         @endif
                         <h6 class="panel-title txt-dark">Export</h6>
                         <div class="pull-right">
-                            <a class="btn btn-warning" href="{{ route('appointment.create') }}"> Add New Appointment</a>
+                            <a class="btn btn-warning" href="{{ route('appointment.create') }}"> Add New
+                                Appointment</a>
                         </div>
                     </div>
                     <div class="clearfix"></div>
@@ -117,19 +118,24 @@
                                                 <td>{{ $item->phone }}</td>
                                                 <td>{{ $item->doctor->name }}</td>
                                                 <td>{{ $item->date }}</td>
-                                                <td><a href="{{route('changeStatus', $item->id)}}" class="{{$item->status=='confirm'? 'btn btn-success':'btn btn-warning'}}">{{ $item->status }}</a></td>
+                                                <td><a href="{{ route('changeStatus', $item->id) }}"
+                                                        class="{{ $item->status == 'confirm' ? 'btn btn-success' : 'btn btn-warning' }}">{{ $item->status }}</a>
+                                                </td>
                                                 <td>
 
                                                     <form action="{{ route('appointment.destroy', $item->id) }}"
                                                         method="POST">
-                                                        
+
                                                         <a class="btn btn-primary"
                                                             href="{{ route('appointment.edit', $item->id) }}">Edit</a>
-                                                            <a class="btn btn-success" href="{{ route('doctor.show',$item->id) }}">View</a>
-                                                            @csrf
+                                                        <a class="btn btn-success"
+                                                            href="{{ route('doctor.show', $item->id) }}">View</a>
+                                                        @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" onclick="return alert('Are you sure to Delete')" class="btn btn-danger">Delete</button>
-                                                        
+                                                        <button type="submit"
+                                                            onclick="return alert('Are you sure to Delete')"
+                                                            class="btn btn-danger">Delete</button>
+
                                                     </form>
 
                                                 </td>
