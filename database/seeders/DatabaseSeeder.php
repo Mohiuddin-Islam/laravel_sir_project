@@ -32,11 +32,13 @@ class DatabaseSeeder extends Seeder
             'name' => 'Doctor Jamil',
             'email' => 'jamil@gmail.com',
             'password' => Hash::make('admin123'),
-            'specialist_id' => '1'
+            'specialist_id' => '1',
+            'photo' => 'images/nophoto.jpg',
+            'status' => 'active',
         ]);
 
 
-        \App\Models\Specialist::factory(20)->create();
+        \App\Models\Specialist::factory(10)->create();
             
     }
 }

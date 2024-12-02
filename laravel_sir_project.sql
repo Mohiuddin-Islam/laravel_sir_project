@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3310
--- Generation Time: Dec 01, 2024 at 08:11 AM
+-- Generation Time: Dec 02, 2024 at 08:09 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,7 +42,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Mohiuddin', 'admin@gmail.com', '$2y$10$FScFRilXoBC81hmrOtCOBetWRQUebPFK3r0x1u11KB3Ni4lIRePYC', NULL, '2024-11-21 01:09:49', '2024-11-21 01:09:49');
+(1, 'Mohiuddin', 'admin@gmail.com', '$2y$10$PLL5QvxtAgLeV9f598Ot9.nhQByKmH1ege64icDU1gc8z9akb26UG', NULL, '2024-12-01 22:56:35', '2024-12-01 22:56:35');
 
 -- --------------------------------------------------------
 
@@ -57,7 +57,8 @@ CREATE TABLE `appointments` (
   `phone` varchar(50) NOT NULL,
   `doctor_id` int(11) NOT NULL,
   `date` date NOT NULL,
-  `remarks` varchar(255) DEFAULT NULL,
+  `remarks` varchar(255) NOT NULL,
+  `status` enum('pending','confirm') NOT NULL DEFAULT 'pending',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -66,11 +67,32 @@ CREATE TABLE `appointments` (
 -- Dumping data for table `appointments`
 --
 
-INSERT INTO `appointments` (`id`, `name`, `email`, `phone`, `doctor_id`, `date`, `remarks`, `created_at`, `updated_at`) VALUES
-(1, 'Habib', 'habib@gmail.com', '01789632556', 1, '2024-12-03', 'dasfadb sdfgehbqar ASfdadsh saergdhra ASEfsg', '2024-12-01 00:59:30', '2024-12-01 00:59:30'),
-(2, 'Kamal', 'kamal@gmail.com', '01789632556', 1, '2024-12-04', 'fdgjhte artywrj5we6t aertyerwh', '2024-12-01 01:00:38', '2024-12-01 01:00:38'),
-(3, 'Mohiuddin', 'mohiuddin@gmail.com', '01789652340', 4, '2024-12-04', 'asdgdshdfjmedkmd sdfgdwh', '2024-12-01 01:03:16', '2024-12-01 01:03:16'),
-(4, 'Rakib Hossain', 'rakib@gmail.com', '0178965234', 1, '2024-12-04', 'eghfs sadfdhb asrgtfj', '2024-12-01 01:11:04', '2024-12-01 01:11:04');
+INSERT INTO `appointments` (`id`, `name`, `email`, `phone`, `doctor_id`, `date`, `remarks`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Nazrul Islam', 'nazrul@gmail.com', '01789632556', 1, '2024-12-03', 'gdjmkdtgkk rgsrjdt egsrtyhets rdthyrdt', 'pending', '2024-12-01 22:57:56', '2024-12-01 23:35:14'),
+(2, 'Rakib Hossain', 'jamil@gmail.com', '01789652340', 1, '2024-12-04', 'hlsac ,sacs nsdcsa scjhsa.', 'confirm', '2024-12-01 23:22:12', '2024-12-01 23:35:11'),
+(3, 'Joy', 'joy@gmail.com', '01789632556', 1, '2024-12-03', 'arteway5 et5esr rthdrt sdthr', 'pending', '2024-12-01 23:36:43', '2024-12-01 23:36:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `departments`
+--
+
+CREATE TABLE `departments` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `details` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `departments`
+--
+
+INSERT INTO `departments` (`id`, `name`, `details`, `created_at`, `updated_at`) VALUES
+(1, 'Cardiology', 'Good', NULL, NULL),
+(2, 'Heart Foundation', 'Heart Car', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -96,13 +118,7 @@ CREATE TABLE `doctors` (
 --
 
 INSERT INTO `doctors` (`id`, `specialist_id`, `name`, `email`, `password`, `photo`, `remember_token`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Doctor Jamil', 'jamil@gmail.com', '$2y$10$sWPe7BcOLmbI.slkUJ0gwOk6/2kQz74M3hdxvufLe.zSiFOGUtMoq', NULL, NULL, 'inactive', '2024-11-21 01:09:49', '2024-11-21 01:09:49'),
-(4, 1, 'Abdullah', 'asm@gmail.com', '$2y$10$SFDKkkVY27d5yMA76IMueudyKiRAQq8XpMYc1y6Y4yj5BPeqkPcvu', NULL, NULL, 'active', '2024-11-25 22:18:15', '2024-11-25 22:18:15'),
-(11, 21, 'Saif Jahan', 'saif@gmail.com', '$2y$10$zNzLoXTeOayZS5GY0VCiC.GhPkm2mARGIvxWVfka4Wvky9iym93lC', NULL, NULL, 'active', '2024-11-25 22:33:03', '2024-11-25 23:12:48'),
-(12, 21, 'Mohiuddin', 'mohiuddin@gmail.com', '$2y$10$IDtU.rOkLee.koNZGGiHOe18w1PbCByEiB9P1FUKsn5VixuAuOy2u', 'images/20241126061104.jpg', NULL, 'active', '2024-11-26 00:11:04', '2024-11-26 00:11:04'),
-(13, 1, 'Arif', 'arif@gmail.com', '$2y$10$eXmRIU0ySoaST88n6N5ji.2CZzG/YORbIx3BtWiCkP6fnA808aqhe', 'images/20241126062023.png', NULL, 'active', '2024-11-26 00:20:23', '2024-11-26 00:20:23'),
-(14, 1, 'Nusrat Jahan', 'nusrat@gmail.com', '$2y$10$C5Uj1sv82oNR.JPgyaOObuamYBL5.8X9oR3tYQ0uqWE2aZf9RVyWS', 'images/20241126063444.png', NULL, 'active', '2024-11-26 00:26:09', '2024-11-26 00:34:44'),
-(15, 2, 'Rakib Hossain', 'rakib@gmail.com', '$2y$10$Qe8/H0RQl1ZlnAlZnIf6X.KU9DLXYx6b73OkAIEPFqDeZmObUBT06', 'images/nophoto.png', NULL, 'active', '2024-11-26 00:31:14', '2024-11-26 00:31:14');
+(1, 1, 'Doctor Jamil', 'jamil@gmail.com', '$2y$10$fl6/VVAacK3EJuxmP7axeOOt0KraBKRVHJnJPE4LbRj6sz8O7qqJO', 'images/nophoto.jpg', NULL, 'active', '2024-12-01 22:56:35', '2024-12-01 22:56:35');
 
 -- --------------------------------------------------------
 
@@ -137,14 +153,15 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(15, '2014_10_12_000000_create_users_table', 1),
-(16, '2014_10_12_100000_create_password_reset_tokens_table', 1),
-(17, '2019_08_19_000000_create_failed_jobs_table', 1),
-(18, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(19, '2024_11_18_063438_create_admins_table', 1),
-(20, '2024_11_19_041903_create_doctors_table', 1),
-(21, '2024_11_20_042519_create_specialists_table', 1),
-(22, '2024_11_27_062248_create_appointments_table', 2);
+(23, '2014_10_12_000000_create_users_table', 1),
+(24, '2014_10_12_100000_create_password_reset_tokens_table', 1),
+(25, '2019_08_19_000000_create_failed_jobs_table', 1),
+(26, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(27, '2024_11_18_063438_create_admins_table', 1),
+(28, '2024_11_19_041903_create_doctors_table', 1),
+(29, '2024_11_20_042519_create_specialists_table', 1),
+(30, '2024_11_27_062248_create_appointments_table', 1),
+(31, '2024_12_02_061326_create_departments_table', 2);
 
 -- --------------------------------------------------------
 
@@ -196,24 +213,16 @@ CREATE TABLE `specialists` (
 --
 
 INSERT INTO `specialists` (`id`, `name`, `details`, `created_at`, `updated_at`) VALUES
-(1, 'Eye Specialist', 'doloribus ut quia nesciunt illum blanditiis quis blanditiis inventore corrupti unde ea aliquid similique earum', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(2, 'ea tempora enim', 'suscipit ut sint aperiam aut ducimus alias ipsum aut vitae qui assumenda quidem aperiam ea', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(4, 'optio tenetur repudiandae', 'aliquid ratione voluptas molestiae vitae perferendis ea ea pariatur quibusdam vitae excepturi nobis quod fugiat', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(5, 'architecto praesentium cum', 'amet quia et quibusdam dicta ratione fuga dolores velit sunt a perspiciatis molestiae quo adipisci', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(6, 'praesentium quasi quidem', 'libero autem qui possimus rem vero nostrum praesentium corrupti qui et officia libero laudantium rerum', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(7, 'accusamus ipsum eum', 'voluptatem non laboriosam iure expedita adipisci rerum non officiis error cumque sit optio ut sed', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(8, 'qui libero deserunt', 'omnis adipisci velit tenetur necessitatibus reprehenderit ex molestiae quasi voluptatum ut placeat tempora quis quibusdam', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(9, 'culpa corporis quibusdam', 'numquam animi iste voluptate ducimus et et tempora et suscipit voluptate dignissimos et non et', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(10, 'minus sunt eum', 'consectetur voluptatem temporibus nulla libero unde reiciendis labore vero et quia quos totam id nihil', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(11, 'nam quia ex', 'aliquid dolorum natus sint autem maxime consequuntur aut aspernatur fuga mollitia non et et sunt', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(12, 'nobis eos ad', 'sit quas id nihil ut quod aut nihil ipsam et totam vel et cumque laborum', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(13, 'debitis occaecati perferendis', 'quia laborum veritatis consequatur atque quidem mollitia soluta et quia quo ut commodi adipisci quia', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(14, 'illum est occaecati', 'quas rerum consequatur veniam pariatur odit suscipit amet inventore iste repellendus qui et porro id', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(15, 'quia non aut', 'dolor et sequi perspiciatis ad id quod voluptatem dolor facilis porro sit aliquam qui expedita', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(16, 'ut veniam consequatur', 'sequi nobis officia aut et cum voluptatem iusto voluptatem voluptas temporibus libero quae quas excepturi', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(17, 'voluptatem enim corporis', 'totam dolor laudantium nihil esse incidunt dolores non corrupti quis deleniti dolorem aut deleniti et', '2024-11-21 01:09:50', '2024-11-21 01:09:50'),
-(18, 'qui et fugit 123', 'quibusdam quibusdam eum repellat velit sint quia nisi explicabo sed quam quis ut ipsum facilis', '2024-11-21 01:09:50', '2024-11-23 21:01:44'),
-(21, 'Head Specialist', 'For Head Care', '2024-11-24 23:32:33', '2024-11-24 23:32:33');
+(1, 'eius maxime est', 'quam vitae quibusdam unde consequatur animi unde voluptas eligendi nobis non culpa aut quo officia', '2024-12-01 22:56:36', '2024-12-01 22:56:36'),
+(2, 'illum et ullam', 'et in aut eius ut repudiandae et iste aliquam beatae optio asperiores veritatis est et', '2024-12-01 22:56:36', '2024-12-01 22:56:36'),
+(3, 'est dolorem pariatur', 'cumque explicabo est numquam occaecati expedita aut quaerat aut id quidem quia beatae veniam non', '2024-12-01 22:56:36', '2024-12-01 22:56:36'),
+(4, 'atque id maxime', 'atque eum sit quasi consequatur tenetur neque debitis est qui ut quia et ad et', '2024-12-01 22:56:36', '2024-12-01 22:56:36'),
+(5, 'natus quis consectetur', 'dolore delectus corporis commodi amet quo modi magnam officiis suscipit sunt voluptatem et et occaecati', '2024-12-01 22:56:36', '2024-12-01 22:56:36'),
+(6, 'aut nam exercitationem', 'error velit suscipit hic nemo atque numquam molestias impedit vitae ut quia omnis omnis labore', '2024-12-01 22:56:36', '2024-12-01 22:56:36'),
+(7, 'repellendus pariatur tempore', 'minima beatae eaque molestiae ullam est accusamus nihil voluptas sed ipsa porro corrupti maiores exercitationem', '2024-12-01 22:56:36', '2024-12-01 22:56:36'),
+(8, 'possimus fugiat tenetur', 'veniam dolore est ipsam ipsa ut reprehenderit ut corporis temporibus eum quo iusto officiis aut', '2024-12-01 22:56:36', '2024-12-01 22:56:36'),
+(9, 'debitis magnam ratione', 'quos a ipsa minus et qui maxime earum quia reiciendis ea voluptates quae suscipit incidunt', '2024-12-01 22:56:36', '2024-12-01 22:56:36'),
+(10, 'in iusto autem', 'debitis doloremque nobis veritatis aut reprehenderit nemo quos ad sapiente voluptas pariatur sed magni facilis', '2024-12-01 22:56:36', '2024-12-01 22:56:36');
 
 -- --------------------------------------------------------
 
@@ -247,6 +256,12 @@ ALTER TABLE `admins`
 -- Indexes for table `appointments`
 --
 ALTER TABLE `appointments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `departments`
+--
+ALTER TABLE `departments`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -310,13 +325,19 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `appointments`
 --
 ALTER TABLE `appointments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `departments`
+--
+ALTER TABLE `departments`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -328,7 +349,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -340,7 +361,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `specialists`
 --
 ALTER TABLE `specialists`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `users`

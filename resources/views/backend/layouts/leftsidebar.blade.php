@@ -29,5 +29,31 @@
                 
             </ul>
         </li>
+
+        <li>
+            <a href="javascript:void(0);" data-toggle="collapse" data-target="#app"><i class="icon-basket-loaded mr-10"></i>Appointment<span class="pull-right"><i class="fa fa-fw fa-angle-down"></i></span></a>
+            <ul id="app" class="collapse collapse-level-1">
+                <li>
+                    <a href="{{route('appointment.index')}}">All Appointment</a>
+                </li>
+                <li>
+                    <a href="{{route('appointment.create')}}">New Appointment</a>
+                </li>
+                
+            </ul>
+        </li>
+
+        <li>
+            <a href="javascript:void(0);" data-toggle="collapse" data-target="#dept"><i class="icon-basket-loaded mr-10"></i>Departments<span class="pull-right"><i class="fa fa-fw fa-angle-down"></i></span></a>
+            <ul id="dept" class="collapse collapse-level-1">
+                <li>
+                    <a href="{{route('department.index')}}">All Departments</a>
+                </li>
+                <li>
+                    <a href="{{route('department.create')}}">New Departments</a>
+                </li>
+                
+            </ul>
+        </li>
     </ul>
 </div>
