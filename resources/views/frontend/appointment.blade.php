@@ -13,7 +13,11 @@
                 <div class="col-xl-6 col-lg-3 col-md-1"></div>
                 <div class="col-xl-4 col-lg-9 col-md-10">
                     <div class="rr-form-box text-center">
+<<<<<<< HEAD
                         @if (session('msg'))
+=======
+                    @if (session('msg'))
+>>>>>>> b48965c80fa80fdf24156bc25bfee0da750372c0
                             <div class="alert alert-success">{{ session('msg') }}</div>
                         @endif
                         <b>OUR Booking Now</b>
@@ -54,9 +58,14 @@
                                         <select name="doctor" style="display: none;">
                                             <option value="">Choose Doctor</option>
                                             @foreach ($doctors as $doctor)
+<<<<<<< HEAD
                                                 <option value="{{ $doctor->id }}" @selected(old('doctor') == $doctor->id)>
                                                     {{ $doctor->name }} ||
                                                     {{ $doctor->specialist->name }}</option>
+=======
+                                                <option value="{{ $doctor->id }}" @selected(old('doctor')==$doctor->id)>{{$doctor->name}} ||
+                                                {{ $doctor->specialist->name }}</option>
+>>>>>>> b48965c80fa80fdf24156bc25bfee0da750372c0
                                             @endforeach
                                         </select>
 
